@@ -28,6 +28,12 @@ There are various parameters for which the user will select from the drop down m
 ![image](https://user-images.githubusercontent.com/63156822/133137250-f260462f-99c9-4601-be18-33c31b92ed3f.png) ![image](https://user-images.githubusercontent.com/63156822/133137264-a15f8950-4f8e-46c1-80d2-f2329d77bc86.png)
 
 
+After clicking on price predict the output price will be shown as follows:
+
+![image](https://user-images.githubusercontent.com/63156822/133137468-769639a1-b4d8-4e99-9caa-c05de385770a.png)
+
+
+
 
 ## About
 The project has been designed as part of the evaluation scheme of my college course UCS757 - Building Innovative Systems. This project involves the use of Machine Learning to predict the price of an AirBnb based on the user inputs.The dataset used was https://www.kaggle.com/stevezhenghp/airbnb-price-prediction. The data is preprocessed, visualised and then fitted on two models. The RandomForestRegressor is pickled to predict the price since it gave better results. In thisw way the project has been created using the various concepts taught to us in our course curriculum.
