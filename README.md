@@ -25,7 +25,7 @@ The landing page of the website takes user inputs for the various parameters as 
 
 There are various parameters for which the user will select from the drop down menu.
 
-![image](https://user-images.githubusercontent.com/63156822/133137250-f260462f-99c9-4601-be18-33c31b92ed3f.png) ![image](https://user-images.githubusercontent.com/63156822/133137264-a15f8950-4f8e-46c1-80d2-f2329d77bc86.png)
+![image](https://user-images.githubusercontent.com/63156822/133137578-9fe9dba0-cd31-4c1e-b1d2-ecb589f93376.png) ![image](https://user-images.githubusercontent.com/63156822/133137605-00c9f085-abfa-47dd-83f3-8d809803b841.png)
 
 
 After clicking on price predict the output price will be shown as follows:
