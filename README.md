@@ -26,14 +26,14 @@ The landing page of the website takes user inputs for the various parameters as 
 
 There are various parameters for which the user will select from the drop down menu.
 
-![image](https://user-images.githubusercontent.com/63156822/133137578-9fe9dba0-cd31-4c1e-b1d2-ecb589f93376.png) ![image](https://user-images.githubusercontent.com/63156822/133137605-00c9f085-abfa-47dd-83f3-8d809803b841.png)
+![image](https://user-images.githubusercontent.com/63156822/133137578-9fe9dba0-cd31-4c1e-b1d2-ecb589f93376.png) ![image](https://user-images.githubusercontent.com/63156822/133137920-5e02f787-9c79-45d7-8792-6720f20c839a.png)
 
 
 After clicking on price predict the output price will be shown as follows:
 
 ![image](https://user-images.githubusercontent.com/63156822/133137468-769639a1-b4d8-4e99-9caa-c05de385770a.png)
 
-
+In this way based on the user input and selection for the various parameters mentioned above we are able to predict the price of the Airbnb and the website redirects to main page where price is displayed. The navbar on top is responsive and will redirect to the index page to give new inputs.
 
 
 ## About
