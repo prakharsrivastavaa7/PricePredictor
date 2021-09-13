@@ -36,6 +36,7 @@ After clicking on price predict the output price will be shown as follows:
 In this way based on the user input and selection for the various parameters mentioned above we are able to predict the price of the Airbnb and the website redirects to main page where price is displayed. The navbar on top is responsive and will redirect to the index page to give new inputs.
 
 
+
 ## About
 The project has been designed as part of the evaluation scheme of my college course UCS757 - Building Innovative Systems. This project involves the use of Machine Learning to predict the price of an AirBnb based on the user inputs.The dataset used was https://www.kaggle.com/stevezhenghp/airbnb-price-prediction. The data is preprocessed, visualised and then fitted on two models. The RandomForestRegressor is pickled to predict the price since it gave better results. In thisw way the project has been created using the various concepts taught to us in our course curriculum.
 
