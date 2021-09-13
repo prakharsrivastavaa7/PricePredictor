@@ -1,0 +1,410 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Prediction</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">PRICE PREDICTOR</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="dmbox" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Enter the Review Score Rating in % </h5>
+                            <input  id="ipb" name="review_scores_rating" required="required">
+                            </div>
+                        </div>
+                    </div>
+            <br>
+            <br>
+            <br>
+            <div class="col-sm-6">
+                <div id="dmbox" class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Enter the Number of Reviews</h5>
+                        <input id="ipb" type="number" name="number_of_reviews" required="required">
+                        </div>
+                      </div>
+                     </div>
+                    </div>   
+
+                    <br>
+                    <br>
+                    <br>
+        
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div id="dmbox" class="card">
+                                <div class="card-body">     
+                                    <h5 class="card-title">Select the number of Bedrooms</h5>
+                                    <select name="bedrooms" id="resea" required="required">
+                                    <option value="Zero">0.0</option>
+                                    <option value="One">1.0</option>
+                                        <option value="Two">2.0</option>
+                                        <option value="Three">3.0</option>
+                                        <option value="Four">4.0</option>
+                                        <option value="Five">5.0</option>
+                                        <option value="Six">6.0</option>
+                                        <option value="Seven">7.0</option>
+                                        <option value="Eight">8.0</option>
+                                        <option value="Nine">9.0</option>
+                                        <option value="Ten">10.0</option>
+                                </select>
+                                </div>
+                      </div>
+                     </div>  
+                     <br>
+                    <br>
+                    <br> 
+                        <div class="col-sm-6">
+                            <div id="dmbox" class="card">
+                                <div class="card-body">     
+                                    <h5 class="card-title">Select the number of Beds</h5>
+                                    <select name="beds" id="resea" required="required">
+                                    <option value="Zero">0.0</option>
+                                    <option value="One">1.0</option>
+                                    <option value="Two">2.0</option>
+                                        <option value="Three">3.0</option>
+                                        <option value="Four">4.0</option>
+                                        <option value="Five">5.0</option>
+                                        <option value="Six">6.0</option>
+                                        <option value="Seven">7.0</option>
+                                        <option value="Eight">8.0</option>
+                                        <option value="Nine">9.0</option>
+                                        <option value="Ten">10.0</option>
+                                        <option value="Eleven">11.0</option>
+                                        <option value="Twelve">12.0</option>
+                                        <option value="Thirteen">13.0</option>
+                                        <option value="Fourteen">14.0</option>
+                                        <option value="Fifteen">15.0</option>
+                                        <option value="Sixteen">16.0</option>
+                                        </select>
+                                </div>
+                      </div>
+                     </div> 
+                     </div>
+                     <br>
+                    <br>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div id="dmbox" class="card">
+                                <div class="card-body">     
+                                    <h5 class="card-title">Enter the Amenities Count</h5>
+                                    <input id="ipb" name="amenities_count" required="required">
+                                </div>
+                      </div>
+                     </div>  
+                     <br>
+                    <br>
+                    <br> 
+                        <div class="col-sm-6">
+                            <div id="dmbox" class="card">
+                                <div class="card-body">     
+                                    <h5 class="card-title">Select the City</h5>
+                            <select name="Source" id="resea" required="required">
+                                <option value="Boston">Boston</option>
+                                <option value="Chicago">Chicago</option>
+                                <option value="DC">DC</option>
+                                <option value="LA">LA</option>
+                                <option value="NYC">NYC</option>
+                                <option value="SF">SF</option>
+                            </select>
+                                </div>
+                      </div>
+                     </div> 
+                     </div>
+                     <br>
+                    <br>
+                    <br>
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div id="dmbox" class="card">
+                                <div class="card-body">     
+                                    <h5 class="card-title">Enter the Property Type</h5>
+                                    <select name="property_type" id="resea" required="required">
+                                    <option value="0">Apartment</option>
+                                        <option value="17">House</option>
+                                        <option value="11">Condominium</option>
+                                            <option value="22">Loft</option>
+                                            <option value="29">Townhouse</option>
+                                            <option value="16">Hostel</option>
+                                            <option value="14">Guest Suite</option>
+                                            <option value="1">Bed & Breakfast</option>
+                                            <option value="4">Bungalow</option>
+                                            <option value="15">Guesthouse</option>
+                                            <option value="12">Dorm</option>
+                                            <option value="23">Other</option>
+                                            <option value="6">Camper/RV</option>
+                                            <option value="33">Villa</option>
+                                            <option value="3">Boutique Hotel</option>
+                                            <option value="27">Timeshare</option>
+                                            <option value="19">In-law</option>
+                                            <option value="2">Boat</option>
+                                            <option value="25">Serviced Apartment</option>
+                                            <option value="8">Castle</option>
+                                            <option value="5">Cabin</option>
+                                            <option value="31">Treehouse</option>
+                                            <option value="28">Tipi</option>
+                                            <option value="32">Vacation home</option>
+                                            <option value="26">Tent</option>
+                                            <option value="18">Hut</option>
+                                            <option value="7">Casa particular</option>
+                                            <option value="10">Chalet</option>
+                                            <option value="34">Yurt</option>
+                                            <option value="13">Earth House</option>
+                                            <option value="24">Parking Space</option>
+                                            <option value="30">Train</option>
+                                            <option value="9">Cave</option>
+                                            <option value="21">Lighthouse</option>
+                                            <option value="20">Island</option>
+                                </select>
+                                </div>
+                      </div>
+                     </div>  
+                     <br>
+                    <br>
+                    <br> 
+                        <div class="col-sm-6">
+                            <div id="dmbox" class="card">
+                                <div class="card-body">     
+                                    <h5 class="card-title">Enter the Host Response Rate in %</h5>
+                                    <input id="ipb"  name="host_response_rate" required="required">  
+                                </div>
+                      </div>
+                     </div> 
+                     </div>
+                     <br>
+                    <br>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div id="dmbox" class="card">
+                                <div class="card-body">     
+                                    <h5 class="card-title">Is there Cleaning Fee?</h5>
+                                    <select name="cleaning_fee" id="resea" required="required">
+                                        <option value="One">Yes</option>
+                                        <option value="Zero">No</option>
+                                    </select>
+                                </div>
+                      </div>
+                     </div>  
+                     <br>
+                    <br>
+                    <br> 
+                        <div class="col-sm-6">
+                            <div id="dmbox" class="card">
+                                <div class="card-body">     
+                                    <h5 class="card-title">Select the Cancellation Policy</h5>
+                                    <select name="cancellation_policy" id="resea" required="required">
+                                        <option value="Two">Strict</option>
+                                        <option value="Three">Moderate</option>
+                                        <option value="Four">Flexible</option>
+                                        <option value="One">Super Strict 30</option>
+                                        <option value="One">Super Strict 60</option>
+                                    </select>    
+                                </div>
+                      </div>
+                     </div> 
+                     </div>
+                     <br>
+                    <br>
+                    <br>
+
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div id="dmbox" class="card">
+                                <div class="card-body">     
+                                    <h5 class="card-title">Is the Host Identity Verified</h5>
+                                    <select name="host_identity_verified" id="resea" required="required">
+                                        <option value="One">True</option>
+                                        <option value="Zero">False</option>
+                                    </select>
+                                </div>
+                      </div>
+                     </div>  
+                     <br>
+                    <br>
+                    <br> 
+                        <div class="col-sm-6">
+                            <div id="dmbox" class="card">
+                                <div class="card-body">     
+                                    <h5 class="card-title">bathrooms</h5>
+                                    <select name="bathrooms" id="resea" required="required">
+                                        <option value="0.0">0.0</option>
+                                        <option value="0.5">0.5</option>
+                                        <option value="1.0">1.0</option>
+                                            <option value="1.5">1.5</option>
+                                            <option value="2.0">2.0</option>
+                                            <option value="2.5">2.5</option>
+                                            <option value="3.0">3.0</option>
+                                            <option value="3.5">3.5</option>
+                                            <option value="4.0">4.0</option>
+                                            <option value="4.5">4.5</option>
+                                            <option value="5.0">5.0</option>
+                                            <option value="5.5">5.5</option>
+                                            <option value="6.0">6.0</option>
+                                            <option value="6.5">6.5</option>
+                                            <option value="7.0">7.0</option>
+                                            <option value="7.5">7.5</option>
+                                            <option value="8.0">8.0</option>
+                                            </select>   
+                                </div>
+                      </div>
+                     </div> 
+                     </div>
+                     <br>
+                    <br>
+                    <br>
+
+                    
+
+
+                    <div  class="row">
+                        <div class="col-sm-6">
+                            <div id="dmbox" class="card">
+                                <div class="card-body">     
+                                    <h5 class="card-title">Select the accommodates</h5>
+                                    <select name="accommodates" id="resea" required="required">
+                                        <option value="One">1</option>
+                                        <option value="Two">2</option>
+                                        <option value="Three">3</option>
+                                        <option value="Four">4</option>
+                                        <option value="Five">5</option>
+                                        <option value="Six">6</option>
+                                        <option value="Seven">7</option>
+                                        <option value="Eight">8</option>
+                                        <option value="Nine">9</option>
+                                        <option value="Ten">10</option>
+                                        <option value="Eleven">11</option>
+                                        <option value="Twelve">12</option>
+                                        <option value="Thirteen">13</option>
+                                        <option value="Fourteen">14</option>
+                                        <option value="Fifteen">15</option>
+                                        <option value="Sixteen">16</option>
+                                    </select> 
+                                </div>
+                      </div>
+                     </div>  
+                     <br>
+                    <br>
+                    <br> 
+                        <div class="col-sm-6">
+                            <div id="dmbox" class="card">
+                                <div class="card-body">     
+                                    <h5 class="card-title">Select the Room Type</h5>
+                                    <select name="room_type" id="resea" required="required">
+                                        <option value="One">Shared room</option>
+                                        <option value="Two">Private room</option>
+                                        <option value="Three">Entire home/apt</option>
+                                    </select>   
+                                </div>
+                      </div>
+                     </div> 
+                     </div>
+                     <br>
+                    <br>
+                    <br>
+
+            
+            <button id="sub" type="submit " class="btn btn-secondary">Predict Price</button>
+            <br>
+
+
+
+
+        </form>
+
+
+    </div>
+
+
+
+
+    <style>
+        body {
+            
+           background: url(https://images.unsplash.com/photo-1579033462043-0f11a7862f7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1901&q=80);
+	        background-size: cover;
+        }
+        
+        .navbar {
+                    background-color: #1f1e1e;
+                }
+        
+        #dmbox {
+            color: #000 !important;
+            background:-webkit-linear-gradient(top,#b5d4d4 25%,#7a407c 75%)}
+            
+        
+        #resea {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: rgb(190, 224, 176);
+        }
+        
+        #sub {
+            width: 124x;
+            height: 43px;
+            text-align: center;
+            border-radius: 18px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #ipb {
+            border-radius: 15px;
+            height: 25px;
+            font-size: 20px;
+            padding:20px;
+            border: 2px solid #609;
+            text-align: center;
+        }
+        
+    </style>
+</body>
+
+</html>
