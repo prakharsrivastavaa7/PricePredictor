@@ -37,8 +37,7 @@ Our next step would be to follow the instruction given on [Heroku Documentation]
 ├── app.py
 ├── AirBnB_Predictor.ipynb		
 ├── file.pkl
-├── .ipynb_checkpoints
-│   ├──AirBnB_Predictor-checkpoint.ipynb
+├── Procfile
 ├── requirements.txt
 ```
 
