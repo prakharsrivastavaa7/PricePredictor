@@ -41,9 +41,12 @@ The price is displayed on a separate page and on clicking the responsive nav-bar
 
                                                           Flowchart
 
-The project involves two parts: Using ML to train model and predict prices followed by deploying a website. The flowchart is as follows:
+There are two main components of the project - Machine Learning based Model Fitting and Web Deployment Using Flask.
+For model training the data is loaded and reduced in size to ensure proper deployment of herkou app. The data is preprocessed and unneccessary items are dropped from the data following which model training is done. We use XGB and RandomForestRegressor to traain the dataset. Hyperparameter tuning is also used in case of RandomForestRegressor to get the best parameters. Based on the R2 value obtained from both the models we select RandomForestRegressor model for fitting. The model is then saved using pickle to deploy it on heroku. 
 
 ![image](https://user-images.githubusercontent.com/63156822/133221564-39c8fb23-09bc-4240-8916-ac865184e009.png)
+
+After website is deployed using heroku the user can access it from the link. The user will input the various parameters required for calculating the price and based on the inputs the model will predict the price and display it.
 
 ![image](https://user-images.githubusercontent.com/63156822/133221441-dfdefdd6-c3f2-43fb-b631-3a93ad47bd9a.png)
 
