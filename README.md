@@ -37,6 +37,8 @@ In this way based on the user input and selection for the various parameters men
 
 The project involves two parts: Using ML to train model and predict prices followed by deploying a website. The flowchart is as follows:
 
+![image](https://user-images.githubusercontent.com/63156822/133221564-39c8fb23-09bc-4240-8916-ac865184e009.png)
+
 ![image](https://user-images.githubusercontent.com/63156822/133221441-dfdefdd6-c3f2-43fb-b631-3a93ad47bd9a.png)
 
 
