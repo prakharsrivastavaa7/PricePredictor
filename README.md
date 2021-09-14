@@ -17,6 +17,8 @@ Link: https://airbnbpriceprediction.herokuapp.com/
 ## Overview
 This is a Flask web app which predicts the price of an AirBnB.
 
+                                                            Input Screenshots      
+
 The landing page of the website takes user inputs for the various parameters as shown below-
 
 ![image](https://user-images.githubusercontent.com/63156822/133137229-6dc0847b-ce12-4489-b75f-f81af027e708.png)
