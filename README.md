@@ -34,6 +34,7 @@ After clicking on price predict the output price will be shown as follows:
 ![image](https://user-images.githubusercontent.com/63156822/133137468-769639a1-b4d8-4e99-9caa-c05de385770a.png)
 
 In this way based on the user input and selection for the various parameters mentioned above we are able to predict the price of the Airbnb and the website redirects to main page where price is displayed. The navbar on top is responsive and will redirect to the index page to give new inputs.
+The price is displayed on a separate page and on clicking the responsive nav-bar Price Predictor at the top we can go back to the main page to give new inputs
 
 The project involves two parts: Using ML to train model and predict prices followed by deploying a website. The flowchart is as follows:
 
