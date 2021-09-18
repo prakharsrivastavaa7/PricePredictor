@@ -72,6 +72,9 @@ Our next step would be to follow the instruction given on [Heroku Documentation]
 ├── file.pkl
 ├── Procfile
 ├── requirements.txt
+├── Novelty.pdf
+├── Flowchart_DS.pdf
+├── I_O_Screenshots_DS.pdf
 ```
 
 ## Technologies Used
