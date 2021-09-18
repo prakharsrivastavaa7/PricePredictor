@@ -30,7 +30,7 @@ There are various parameters for which the user will select from the drop down m
 
 ![image](https://user-images.githubusercontent.com/63156822/133137578-9fe9dba0-cd31-4c1e-b1d2-ecb589f93376.png) ![image](https://user-images.githubusercontent.com/63156822/133137920-5e02f787-9c79-45d7-8792-6720f20c839a.png)
 
-   # Output Screenshots
+   ### Output Screenshots
 
 After clicking on price predict the output price will be shown as follows:
 
@@ -39,7 +39,7 @@ After clicking on price predict the output price will be shown as follows:
 In this way based on the user input and selection for the various parameters mentioned above we are able to predict the price of the Airbnb and the website redirects to main page where price is displayed. The navbar on top is responsive and will redirect to the index page to give new inputs.
 The price is displayed on a separate page and on clicking the responsive nav-bar Price Predictor at the top we can go back to the main page to give new inputs
 
-                                                          Flowchart
+  ### Flowchart
 
 There are two main components of the project - Machine Learning based Model Fitting and Web Deployment Using Flask.
 For model training the data is loaded and reduced in size to ensure proper deployment of herkou app. The data is preprocessed and unneccessary items are dropped from the data following which model training is done. We use XGB and RandomForestRegressor to traain the dataset. Hyperparameter tuning is also used in case of RandomForestRegressor to get the best parameters. Based on the R2 value obtained from both the models we select RandomForestRegressor model for fitting. The model is then saved using pickle to deploy it on heroku. 
